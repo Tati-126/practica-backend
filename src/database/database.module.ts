@@ -19,7 +19,12 @@ import { DatabaseInitService } from './database-init.service';
         synchronize: configService.get<string>('DB_SYNCHRONIZE') === 'true',
         logging: configService.get<string>('DB_LOGGING') === 'true',
         autoLoadEntities: true,
-        // TODO (estudiante): Agrega la configuración SSL si tu proveedor de base de datos lo requiere.
+        // SSL requerido por proveedores como Aiven (ssl-mode=REQUIRED).
+        // Se activa con DB_SSL=true en las variables de entorno.
+        ssl:
+          configService.get<string>('DB_SSL') === 'true'
+            ? { rejectUnauthorized: false }
+            : undefined,
       }),
     }),
     UsersModule,
