@@ -319,3 +319,13 @@ practica-backend/
 - En producción, usa migraciones de TypeORM (fuera del alcance de esta práctica).
 
 ---
+
+## Equipo de trabajo
+
+| Nombre | Rol | GitHub |
+|---|---|---|
+| Tatiana | Backend Developer | [@Tati-126](https://github.com/Tati-126) |
+
+> Proyecto desarrollado como parte de la práctica de laboratorio — Desarrollo Backend con NestJS.
+
+---
